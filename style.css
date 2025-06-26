@@ -109,3 +109,44 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, var(--space-300));
+}
+
+.cluster {
+  display: flex;
+  flex-direction: var(--cluster-direction, row);
+  flex-wrap: wrap;
+  gap: var(--cluster-space, var(--space-300));
+  justify-content: var(--cluster-justify, start);
+  align-items: var(--cluster-align, center);
+}
+
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--switcher-gutter, 0);
+  align-items: var(--switcher-vertical-alignment, stretch);
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc(
+    (var(--switcher-target-container-width, 500px) - 100%) * 999
+  );
+}
+
+.switcher[data-switcher-reverse] {
+  flex-direction: row-reverse;
+}
+
+.challenge-wrapper {
+  --_max-with: var(--max-width);
+
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: var(--space-300)
+    max(var(--space-300), calc(50% - var(--_max-with) / 2));
+}
