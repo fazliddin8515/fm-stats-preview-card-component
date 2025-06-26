@@ -1,0 +1,78 @@
+:root {
+  --blue-800: hsl(233, 47%, 7%);
+  --blue-600: hsl(244, 38%, 16%);
+  --violet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --white-75: hsl(from var(--white) h s l / 0.75);
+  --white-60: hsl(from var(--white) h s l / 0.6);
+
+  --space-25: 2px;
+  --space-100: 8px;
+  --space-200: 16px;
+  --space-300: 24px;
+  --space-375: 30px;
+  --space-400: 32px;
+  --space-500: 40px;
+  --space-750: 60px;
+  --space-800: 64px;
+  --space-900: 72px;
+
+  --radius-8: 8px;
+
+  --font-family-lexand: "Lexend Deca", sans-serif;
+  --font-family-inter: "Inter", sans-serif;
+
+  --font-size-36: 36px;
+  --font-size-28: 28px;
+  --font-size-24: 24px;
+  --font-size-15: 15px;
+  --font-size-12: 12px;
+
+  --font-size-36-28: var(--font-size-28);
+
+  @media (min-width: 600px) {
+    --font-size-36-28: var(--font-size-36);
+  }
+
+  --font-weight-400: 400;
+  --font-weight-700: 700;
+
+  --line-height-12: 1.2;
+  --line-height-16: 1.6667;
+  --line-height-21: 2.0833;
+
+  --letter-spacing-plus-1: 1px;
+
+  --text-preset-1: var(--font-weight-700) var(--font-size-36-28) /
+    var(--line-height-12) var(--font-family-inter);
+  --text-preset-2: var(--font-weight-400) var(--font-size-15) /
+    var(--line-height-16) var(--font-family-inter);
+  --text-preset-3: var(--font-weight-700) var(--font-size-24)
+    var(--font-family-inter);
+  --text-preset-4: var(--font-weight-400) var(--font-size-12) /
+    var(--line-height-21) var(--font-family-lexand);
+
+  --color-text-default: var(--white-75);
+  --color-text-heading: var(--white);
+  --color-text-primary: var(--violet);
+  --color-text-secondary: var(--white-60);
+
+  --color-background-default: var(--blue-800);
+  --color-background-primary: var(--violet);
+  --color-background-card: var(--blue-600);
+
+  --typography-title: var(--text-preset-1);
+  --typography-body: var(--text-preset-2);
+  --typography-label: var(--text-preset-3);
+  --typography-data: var(--text-preset-4);
+
+  --radius-default: var(--radius-8);
+
+  --max-width: 1110px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
