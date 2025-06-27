@@ -150,3 +150,33 @@ img {
   padding: var(--space-300)
     max(var(--space-300), calc(50% - var(--_max-with) / 2));
 }
+
+.preview {
+  background-color: var(--color-background-card);
+  border-radius: var(--radius-default);
+  overflow: hidden;
+  text-align: center;
+
+  @media (min-width: 600px) {
+    text-align: left;
+  }
+}
+
+.preview__image {
+  img {
+    block-size: 100%;
+    inline-size: 100%;
+    object-fit: cover;
+    object-position: right;
+  }
+}
+
+.preview__content {
+  padding: var(--space-400);
+  padding-block-start: var(--space-500);
+
+  @media (min-width: 600px) {
+    padding: var(--space-900);
+    padding-block-end: var(--space-750);
+  }
+}
