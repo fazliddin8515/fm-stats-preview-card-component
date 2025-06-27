@@ -152,6 +152,8 @@ img {
 }
 
 .preview {
+  --switcher-gutter: var(--space-375);
+  --switcher-target-container-width: 800px;
   background-color: var(--color-background-card);
   border-radius: var(--radius-default);
   overflow: hidden;
@@ -178,5 +180,42 @@ img {
   @media (min-width: 600px) {
     padding: var(--space-900);
     padding-block-end: var(--space-750);
+  }
+}
+
+.stats {
+  --flow-space: var(--space-500);
+  --cluster-space: var(--space-300);
+  --cluster-direction: column;
+
+  @media (min-width: 600px) {
+    --flow-space: var(--space-900);
+    --cluster-space: var(--space-800);
+    --cluster-direction: row;
+  }
+}
+
+.stats li {
+  color: var(--color-text-secondary);
+  font: var(--typography-data);
+  letter-spacing: var(--letter-spacing-plus-1);
+  text-transform: uppercase;
+
+  strong {
+    display: block;
+    font: var(--typography-label);
+    letter-spacing: 0;
+    text-transform: none;
+    margin-block-end: var(--space-25);
+  }
+}
+
+.monotone {
+  isolation: isolate;
+  background-color: var(--color-background-primary);
+
+  img {
+    mix-blend-mode: multiply;
+    opacity: 0.75;
   }
 }
